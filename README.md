@@ -55,3 +55,16 @@ http-socket = :9090
 ; generate a 1 pixel black gif when asking for "/foo.gif"
 route = ^/foo_(\d+)_(\d+)_(\d+)\.gif$ gif:width=80,height=80,red=$1,green=$2,blue=$3
 ```
+
+(asking for ``/foo_255_255_0.gif`` will result in a yellow box)
+
+Or you can use the QUERY_STRING
+
+```ini
+[uwsgi]
+plugin = gif
+http-socket = :9090
+; generate a 1 pixel black gif when asking for "/foo.gif"
+route = ^/foo\.gif$ gif:width=80,height=80,red=${qs[r]},green=${qs[g]},blue=${qs[b]}
+```
+(asking for ``/foo.gif?r=128&g=128&b=128`` will result in a gray box)
