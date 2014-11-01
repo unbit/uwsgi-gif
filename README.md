@@ -12,7 +12,7 @@ The plugin is 2.0 friendly:
 uwsgi --build-plugin https://github.com/unbit/uwsgi-gif
 ```
 
-The procedure will generate the 'gif' plugin (gif_plugin.so) you can put whatever you want (by default uWSGI searches for plugins in the current directory but you can load them specifying the absolute path)
+The procedure will generate the 'gif' plugin (gif_plugin.so) that you can put where you want (by default uWSGI searches for plugins in the current directory but you can load them specifying the absolute path)
 
 Usage
 =====
