@@ -66,3 +66,8 @@ http-socket = :9090
 route = ^/foo\.gif$ gif:width=80,height=80,red=${qs[r]},green=${qs[g]},blue=${qs[b]}
 ```
 (asking for ``/foo.gif?r=128&g=128&b=128`` will result in a gray box)
+
+Notes
+=====
+
+The gif generation is really fast and consumes about 300 bytes of memory as the compression way used is pretty dumb. (it can compress about 50% of the pixels resetting the LZW dictionary every two of them). If you care bandwidth do not use the plugin for generation of really big images (or implement full LZW encoding and send a pull request for it ;)
