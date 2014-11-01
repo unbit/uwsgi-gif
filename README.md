@@ -17,7 +17,7 @@ The procedure will generate the 'gif' plugin (gif_plugin.so) you can put whateve
 Usage
 =====
 
-The plugin adds a 'gif' routing action, that by default generate a 1 pixel black gif:
+The plugin adds a 'gif' routing action, that by default generates a 1 pixel black gif:
 
  
 ```ini
